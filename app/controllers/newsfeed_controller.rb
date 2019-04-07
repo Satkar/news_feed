@@ -1,5 +1,5 @@
 class NewsfeedController < ApplicationController
 	def index
-		render json: Post.includes(:comments)
+		render json: Post.fetch_records(params[:page_number])
 	end
 end
