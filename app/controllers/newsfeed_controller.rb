@@ -1,5 +1,5 @@
 class NewsfeedController < ApplicationController
 	def index
-		render json: User.all
+		render json: Post.includes(:comments)
 	end
 end
